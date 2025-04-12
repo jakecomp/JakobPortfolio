@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const titles = [
-  'Platform Engineer',
-  'Software Engineer',
-  'AI Enthusiast ✨',
-  'Bean Water Addict ☕',
-  'Dev Tools Enthusiast 🔧'
+  { text: 'Platform Engineer', icon: ' ☁️' },
+  { text: 'Software Engineer', icon: ' </>' },
+  { text: 'AI Enthusiast', icon: ' ✨' },
+  { text: 'Bean Water Addict', icon: ' ☕' },
+  { text: 'Dev Tools Enthusiast', icon: ' 🔧' }
 ];
 
 const RotatingTitle = () => {
@@ -33,7 +33,10 @@ const RotatingTitle = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="absolute w-full text-center text-lg md:text-xl text-primary font-light"
         >
-          {titles[currentIndex]}
+          {titles[currentIndex].text}
+          <span className={`font-bold ${currentIndex === 1 ? 'text-white' : ''}`}>
+            {titles[currentIndex].icon}
+          </span>
         </motion.div>
       </AnimatePresence>
     </div>
