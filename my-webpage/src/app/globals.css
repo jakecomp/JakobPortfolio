@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  /* West coast inspired color palette */
+  --background: #f8f5f2; /* Sandy beach */
+  --foreground: #2c3e50; /* Deep ocean blue */
+  --primary: #3a7d7e; /* Teal/Ocean */
+  --secondary: #6b9080; /* Forest green */
+  --accent: #d9ae94; /* Driftwood */
+  --muted: #e8e4e1; /* Misty fog */
+  --dark-forest: #2f3e46; /* Dark forest */
+  --slate-rock: #354f52; /* Slate rock */
+  --cedar: #994636; /* Cedar wood */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1e2729; /* Dark ocean */
+    --foreground: #f3f4f6; /* Moonlight */
+    --primary: #4e9b9c; /* Lighter teal */
+    --secondary: #84a98c; /* Lighter forest */
+    --accent: #c5a287; /* Lighter driftwood */
+    --muted: #2d3638; /* Dark mist */
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
