@@ -46,7 +46,7 @@ const About = () => {
             variants={fadeInUp}
             className="text-lg text-foreground/80"
           >
-            I'm a passionate engineer with a love for building scalable systems and reliable solutions. I live in beautiful Vancouver Island, and I love creating tools that spark joy for developers.
+            I'm a passionate engineer with a love for building scalable systems and reliable solutions. I live on beautiful Vancouver Island, and I love creating tools that spark joy for developers.
           </motion.p>
         </motion.div>
 
@@ -106,6 +106,10 @@ const About = () => {
               <div className="flex items-center gap-2">
                 <FaCircle className="text-primary text-xs" />
                 <span className="text-foreground/70">C</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Java</span>
               </div>
             </div>
           </motion.div>
