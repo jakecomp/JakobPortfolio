@@ -8,7 +8,7 @@ const titles = [
   { text: 'Software Engineer', icon: ' </>' },
   { text: 'AI Enthusiast', icon: ' ✨' },
   { text: 'Bean Water Addict', icon: ' ☕' },
-  { text: 'Dev Tools Enthusiast', icon: ' 🔧' }
+  { text: 'Dev Tools Enthusiast', icon: ' 🛠️' }
 ];
 
 const RotatingTitle = () => {

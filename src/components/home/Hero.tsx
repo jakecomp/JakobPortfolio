@@ -38,8 +38,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8"
         >
-          Building digital solutions with the calm and precision that comes from living 
-          surrounded by the natural beauty of Vancouver Island.
+          Passionate engineer currently developing platform as a service tooling at Fullscript
         </motion.p>
         
         <motion.div

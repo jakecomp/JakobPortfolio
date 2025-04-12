@@ -7,47 +7,38 @@ const experiences = [
   {
     id: 1,
     type: 'work',
-    title: 'Senior Platform Engineer',
-    company: 'West Coast Tech',
-    location: 'Victoria, BC',
-    period: '2021 - Present',
-    description: 'Lead the development of cloud infrastructure and devops automation, improving deployment speed by 60% and reducing costs by 25%.'
+    title: 'Platform Engineer III',
+    company: 'Fullscript',
+    location: 'Remote',
+    period: 'November 2023 - Present',
+    description: 'Working remotely as a Platform Engineer, focusing on cloud infrastructure and developer experience improvements.'
   },
   {
     id: 2,
     type: 'work',
     title: 'Software Engineer',
-    company: 'Island Innovations',
-    location: 'Nanaimo, BC',
-    period: '2018 - 2021',
-    description: 'Developed scalable backend services using Node.js, created CI/CD pipelines, and optimized database performance.'
+    company: 'General Dynamics Mission Systems Canada',
+    location: 'Victoria, BC',
+    period: 'April 2021 - October 2023',
+    description: 'Developed mission-critical software solutions and systems for defense and security applications.'
   },
   {
     id: 3,
     type: 'work',
-    title: 'Junior Developer',
-    company: 'Pacific Digital Solutions',
-    location: 'Vancouver, BC',
-    period: '2016 - 2018',
-    description: 'Built web applications using JavaScript frameworks, implemented responsive designs, and collaborated with UX designers.'
+    title: 'Data Engineer',
+    company: 'Babcock',
+    location: 'Victoria, BC',
+    period: 'January 2020 - March 2021',
+    description: 'Built data pipelines and analytics solutions to support operational decision-making and business intelligence.'
   },
   {
     id: 4,
     type: 'education',
-    title: 'MSc Computer Science',
+    title: 'BSENG Software Engineering',
     company: 'University of Victoria',
     location: 'Victoria, BC',
-    period: '2014 - 2016',
-    description: 'Specialized in distributed systems and cloud computing. Thesis on optimizing containerized microservices deployment.'
-  },
-  {
-    id: 5,
-    type: 'education',
-    title: 'BSc Computer Science',
-    company: 'University of British Columbia',
-    location: 'Vancouver, BC',
-    period: '2010 - 2014',
-    description: 'Focus on software engineering, algorithms, and database systems. Graduated with honors.'
+    period: 'September 2019 - October 2023',
+    description: 'Earned a degree in Software Engineering with a focus on software system scalability and reliability, developing expertise in designing robust, high-performance applications.'
   }
 ];
 
@@ -94,7 +85,7 @@ const Experience = () => {
             variants={fadeInUp}
             className="text-lg text-foreground/80"
           >
-            My professional journey through the tech landscape of British Columbia
+            My professional journey through the tech landscape
           </motion.p>
         </motion.div>
 

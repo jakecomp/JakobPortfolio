@@ -46,9 +46,7 @@ const About = () => {
             variants={fadeInUp}
             className="text-lg text-foreground/80"
           >
-            I'm a passionate engineer with a love for building scalable systems and elegant solutions.
-            Based on Vancouver Island, I bring a west coast perspective to software development—calm, 
-            thoughtful, and connected to nature.
+            I'm a passionate engineer with a love for building scalable systems and reliable solutions. I live in beautiful Vancouver Island, and I love creating tools that spark joy for developers.
           </motion.p>
         </motion.div>
 
