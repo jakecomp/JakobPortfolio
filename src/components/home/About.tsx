@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaCode, FaServer, FaTools, FaBrain } from 'react-icons/fa';
+import { FaCode, FaServer, FaRobot, FaDatabase, FaCircle } from 'react-icons/fa';
 
 const About = () => {
   const fadeInUp = {
@@ -50,6 +50,16 @@ const About = () => {
           </motion.p>
         </motion.div>
 
+        <motion.h2
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-2xl md:text-3xl font-bold mb-10 text-foreground text-center"
+        >
+          Technical Skills
+        </motion.h2>
+
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -57,60 +67,180 @@ const About = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          {/* Skill Card 1 */}
+          {/* Programming Languages */}
           <motion.div
             variants={fadeInUp}
-            className="bg-muted p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-lg transition-shadow"
           >
-            <div className="text-primary text-3xl mb-4">
-              <FaCode />
+            <div className="flex items-center gap-3 bg-muted p-4 rounded-lg mb-4 shadow-sm">
+              <div className="text-primary text-2xl">
+                <FaCode />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground">Languages</h3>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-foreground">Software Engineering</h3>
-            <p className="text-foreground/70">
-              Crafting clean, efficient, and maintainable code that solves real-world problems.
-            </p>
+            <div className="grid grid-cols-2 gap-x-2 gap-y-2 pl-3">
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Go</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Ruby</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Python</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">TypeScript</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">JavaScript</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">C++</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">C</span>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Skill Card 2 */}
+          {/* Platform Tools */}
           <motion.div
             variants={fadeInUp}
-            className="bg-muted p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-lg transition-shadow"
           >
-            <div className="text-primary text-3xl mb-4">
-              <FaServer />
+            <div className="flex items-center gap-3 bg-muted p-4 rounded-lg mb-4 shadow-sm">
+              <div className="text-primary text-2xl">
+                <FaServer />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground">Platform Tools</h3>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-foreground">Platform Engineering</h3>
-            <p className="text-foreground/70">
-              Building robust infrastructure and platforms that empower development teams.
-            </p>
+            <div className="grid grid-cols-2 gap-x-2 gap-y-2 pl-3">
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">AWS</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Azure</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Vercel</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Helm</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Kubernetes</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Docker</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">GitLab CI/CD</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">GitHub Actions</span>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Skill Card 3 */}
+          {/* AI Tools */}
           <motion.div
             variants={fadeInUp}
-            className="bg-muted p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-lg transition-shadow"
           >
-            <div className="text-primary text-3xl mb-4">
-              <FaBrain />
+            <div className="flex items-center gap-3 bg-muted p-4 rounded-lg mb-4 shadow-sm">
+              <div className="text-primary text-2xl">
+                <FaRobot />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground">AI Tools</h3>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-foreground">AI & Machine Learning</h3>
-            <p className="text-foreground/70">
-              Exploring the frontier of what's possible with artificial intelligence and machine learning.
-            </p>
+            <div className="grid grid-cols-2 gap-x-2 gap-y-2 pl-3">
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Cursor</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">PyTorch</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">n8n</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Keras</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">SageMaker</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">MLFlow</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">KubeFlow</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Warp CLI</span>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Skill Card 4 */}
+          {/* Databases */}
           <motion.div
             variants={fadeInUp}
-            className="bg-muted p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            className="rounded-lg transition-shadow"
           >
-            <div className="text-primary text-3xl mb-4">
-              <FaTools />
+            <div className="flex items-center gap-3 bg-muted p-4 rounded-lg mb-4 shadow-sm">
+              <div className="text-primary text-2xl">
+                <FaDatabase />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground">Databases</h3>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-foreground">Dev Tools</h3>
-            <p className="text-foreground/70">
-              Creating and optimizing developer tools that enhance productivity and joy.
-            </p>
+            <div className="grid grid-cols-2 gap-x-2 gap-y-2 pl-3">
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">MySQL</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Postgres</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">MongoDB</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">Redis</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">ElasticSearch</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaCircle className="text-primary text-xs" />
+                <span className="text-foreground/70">SQLite</span>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
