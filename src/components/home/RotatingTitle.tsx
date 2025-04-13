@@ -23,14 +23,18 @@ const RotatingTitle = () => {
   }, []);
 
   return (
-    <div className="h-8 relative mb-6 md:mb-8">
+    <div className="h-10 relative mb-6 md:mb-8 overflow-visible">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
-          initial={{ y: 20, opacity: 0 }}
+          initial={{ y: 15, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -20, opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          exit={{ y: -15, opacity: 0 }}
+          transition={{ 
+            duration: 0.4, 
+            ease: "easeOut",
+            opacity: { duration: 0.2 }
+          }}
           className="absolute w-full text-lg md:text-2xl text-primary font-medium md:text-left"
         >
           {titles[currentIndex].text}

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
 
 const projects = [
@@ -10,15 +11,15 @@ const projects = [
     title: 'GameStonk',
     description: 'A Rails Day Trading Stock Application that allows users to track, analyze, and simulate trading of stocks in real-time.',
     tags: ['Ruby on Rails', 'PostgreSQL', 'JavaScript', 'APIs', 'Work in Progress 🚧'],
-    image: '/images/gamestonk.jpg',
-    githubUrl: 'https://github.com/',
+    image: '/GameStonk.jpeg',
+    githubUrl: 'https://github.com/jakecomp/GameStonk',
   },
   {
     id: 2,
     title: 'SolarSystem Mapper',
     description: 'A beautiful visualization of the solar system with live orbits and informative events about the planets and sun.',
     tags: ['JavaScript', 'Three.js', 'WebGL', 'HTML/CSS', 'Work in Progress 🚧'],
-    image: '/images/solarsystem.jpg',
+    image: '/SolarSystems.jpeg',
     githubUrl: 'https://github.com/',
   },
 ];
@@ -83,11 +84,15 @@ const Projects = () => {
               variants={fadeInUp}
               className="bg-muted rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
             >
-              <div className="h-48 bg-dark-forest flex items-center justify-center">
-                <div className="text-white text-lg font-medium p-4 text-center">
-                  {project.title}
-                  <p className="text-sm text-white/60 mt-2">Image placeholder</p>
-                </div>
+              <div className="h-48 relative overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className="absolute inset-0 bg-dark-forest/30 hover:bg-dark-forest/10 transition-colors"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-foreground">{project.title}</h3>
@@ -109,15 +114,17 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex space-x-4">
-                  <Link 
-                    href={project.githubUrl} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-foreground hover:text-primary transition-colors"
-                  >
-                    <FaGithub className="mr-2" />
-                    Code
-                  </Link>
+                  {project.id === 1 && (
+                    <Link 
+                      href={project.githubUrl} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-foreground hover:text-primary transition-colors"
+                    >
+                      <FaGithub className="mr-2" />
+                      Code
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -132,7 +139,7 @@ const Projects = () => {
           className="text-center mt-12"
         >
           <Link
-            href="https://github.com/"
+            href="https://github.com/jakecomp"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-md transition-colors"

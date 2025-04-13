@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <Link 
-                href="https://github.com/" 
+                href="https://github.com/jakecomp" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-accent transition-colors"
@@ -25,7 +25,7 @@ const Footer = () => {
                 <FaGithub size={24} />
               </Link>
               <Link 
-                href="https://linkedin.com/" 
+                href="https://www.linkedin.com/in/jakob-valen-264036189/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-accent transition-colors"

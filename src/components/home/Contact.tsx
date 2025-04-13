@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPaperPlane } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Contact = () => {
   const fadeInUp = {
@@ -14,8 +15,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 pb-8 bg-slate-rock text-white">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="contact" className="py-16 pb-8 relative text-white">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/botanical_beach.jpeg"
+          alt="Botanical Beach, Vancouver Island"
+          fill
+          style={{ objectFit: 'cover' }}
+          quality={90}
+          priority={false}
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+      
+      <div className="container relative z-10 mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -34,7 +48,7 @@ const Contact = () => {
           ></motion.div>
           <motion.p 
             variants={fadeInUp}
-            className="text-lg text-white/80"
+            className="text-lg text-white/90"
           >
             Want to nerd out about tech, share your favourite dev tools, pair up on a new project, or just feel like saying hello? Feel free to email me, and I'll get back to you as soon as I can.
           </motion.p>
@@ -46,7 +60,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-dark-forest/50 p-10 rounded-lg shadow-md text-center"
+            className="bg-dark-forest/70 p-10 rounded-lg shadow-lg text-center"
           >
             <a 
               href="mailto:jakobvalen9@gmail.com?subject=Hello%20from%20your%20portfolio%20site" 
@@ -56,9 +70,9 @@ const Contact = () => {
               Send Email
             </a>
             
-            <div className="mt-8 pt-6 border-t border-white/10">
-              <p className="text-white/60">
-                Or copy my email address: <span className="font-medium text-white/90">jakobvalen9@gmail.com</span>
+            <div className="mt-8 pt-6 border-t border-white/20">
+              <p className="text-white/80 backdrop-blur-sm py-2 px-4 rounded-md bg-dark-forest/40 inline-block">
+                Or copy my email address: <span className="font-medium text-white">jakobvalen9@gmail.com</span>
               </p>
             </div>
           </motion.div>
