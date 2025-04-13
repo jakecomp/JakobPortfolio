@@ -47,16 +47,24 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.label} 
-              href={link.href}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center">
+          <div className="space-x-8 mr-6">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.label} 
+                href={link.href}
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          <Link 
+            href="/#contact" 
+            className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md transition-colors"
+          >
+            Contact Me
+          </Link>
         </div>
 
         {/* Mobile Navigation Icon */}
@@ -83,6 +91,13 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <Link 
+              href="/#contact" 
+              className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md transition-colors inline-block text-center mt-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact Me
+            </Link>
           </div>
         </div>
       )}

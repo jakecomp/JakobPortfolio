@@ -11,7 +11,8 @@ const experiences = [
     company: 'Fullscript',
     location: 'Remote',
     period: 'November 2023 - Present',
-    description: 'Working remotely as a Platform Engineer, focusing on cloud infrastructure and developer experience improvements.'
+    description: 'Working remotely as a Platform Engineer, focusing on cloud infrastructure and developer experience improvements.',
+    tags: ['Go', 'Ruby', 'TypeScript']
   },
   {
     id: 2,
@@ -20,7 +21,8 @@ const experiences = [
     company: 'General Dynamics Mission Systems Canada',
     location: 'Victoria, BC',
     period: 'April 2021 - October 2023',
-    description: 'Developed mission-critical software solutions and systems for defense and security applications.'
+    description: 'Developed mission-critical software solutions and systems for defense and security applications.',
+    tags: ['Python', 'C++', 'C']
   },
   {
     id: 3,
@@ -29,7 +31,8 @@ const experiences = [
     company: 'Babcock',
     location: 'Victoria, BC',
     period: 'January 2020 - March 2021',
-    description: 'Built data pipelines and analytics solutions to support operational decision-making and business intelligence.'
+    description: 'Built data pipelines and analytics solutions to support operational decision-making and business intelligence.',
+    tags: ['Python', 'SQL']
   },
   {
     id: 4,
@@ -126,6 +129,20 @@ const Experience = () => {
                 <div className="mb-2 text-sm font-medium text-primary/80">{exp.period}</div>
                 <h3 className="text-xl font-semibold mb-1 text-foreground">{exp.title}</h3>
                 <div className="text-foreground/80 mb-3">{exp.company} • {exp.location}</div>
+                
+                {exp.tags && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {exp.tags.map((tag) => (
+                      <span 
+                        key={tag} 
+                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                
                 <p className="text-foreground/70">{exp.description}</p>
               </div>
             </motion.div>

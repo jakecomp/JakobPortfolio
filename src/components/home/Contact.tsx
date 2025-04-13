@@ -91,32 +91,10 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-medium mb-1">Email</h4>
-                <a href="mailto:jakob@example.com" className="text-white/80 hover:text-accent transition-colors">
-                  jakob@example.com
+                <a href="mailto:jakobvalen9@gmail.com" className="text-white/80 hover:text-accent transition-colors">
+                  jakobvalen9@gmail.com
                 </a>
               </div>
-            </div>
-            
-            <div className="flex items-start mb-10">
-              <div className="text-accent mr-4 mt-1">
-                <FaMapMarkerAlt size={24} />
-              </div>
-              <div>
-                <h4 className="text-lg font-medium mb-1">Location</h4>
-                <p className="text-white/80">
-                  Vancouver Island, British Columbia
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-dark-forest/50 p-6 rounded-lg">
-              <h4 className="text-lg font-medium mb-2">Working Hours</h4>
-              <p className="text-white/80 mb-4">
-                I'm typically available Monday through Friday, 9am to 5pm Pacific Time.
-              </p>
-              <p className="text-white/80">
-                I'll do my best to respond to your message within 24-48 hours.
-              </p>
             </div>
           </motion.div>
           
