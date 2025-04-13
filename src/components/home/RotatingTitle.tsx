@@ -23,7 +23,7 @@ const RotatingTitle = () => {
   }, []);
 
   return (
-    <div className="h-8 relative overflow-hidden">
+    <div className="h-8 relative mb-6 md:mb-8">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -31,7 +31,7 @@ const RotatingTitle = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="absolute w-full text-center text-lg md:text-xl text-primary font-light"
+          className="absolute w-full text-lg md:text-2xl text-primary font-medium md:text-left"
         >
           {titles[currentIndex].text}
           <span className={`font-bold ${currentIndex === 1 ? 'text-white' : ''}`}>

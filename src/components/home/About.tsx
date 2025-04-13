@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaRobot, FaDatabase, FaCircle } from 'react-icons/fa';
+import Image from 'next/image';
 
 const About = () => {
   const fadeInUp = {

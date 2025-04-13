@@ -2,26 +2,24 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
     id: 1,
     title: 'GameStonk',
     description: 'A Rails Day Trading Stock Application that allows users to track, analyze, and simulate trading of stocks in real-time.',
-    tags: ['Ruby on Rails', 'PostgreSQL', 'JavaScript', 'APIs'],
+    tags: ['Ruby on Rails', 'PostgreSQL', 'JavaScript', 'APIs', 'Work in Progress 🚧'],
     image: '/images/gamestonk.jpg',
     githubUrl: 'https://github.com/',
-    liveUrl: 'https://example.com/',
   },
   {
     id: 2,
     title: 'SolarSystem Mapper',
     description: 'A beautiful visualization of the solar system with live orbits and informative events about the planets and sun.',
-    tags: ['JavaScript', 'Three.js', 'WebGL', 'HTML/CSS'],
+    tags: ['JavaScript', 'Three.js', 'WebGL', 'HTML/CSS', 'Work in Progress 🚧'],
     image: '/images/solarsystem.jpg',
     githubUrl: 'https://github.com/',
-    liveUrl: 'https://example.com/',
   },
 ];
 
@@ -46,7 +44,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="py-20 pb-12 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial="hidden"
@@ -68,7 +66,7 @@ const Projects = () => {
             variants={fadeInUp}
             className="text-lg text-foreground/80"
           >
-            Selected works from my journey as a developer and engineer
+            A few fun projects I work away on the side
           </motion.p>
         </motion.div>
 
@@ -99,7 +97,11 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span 
                       key={tag} 
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      className={`px-3 py-1 rounded-full text-sm ${
+                        tag.includes('Work in Progress') 
+                          ? 'bg-amber-100 text-amber-700' 
+                          : 'bg-primary/10 text-primary'
+                      }`}
                     >
                       {tag}
                     </span>
@@ -116,17 +118,6 @@ const Projects = () => {
                     <FaGithub className="mr-2" />
                     Code
                   </Link>
-                  {project.liveUrl && (
-                    <Link 
-                      href={project.liveUrl} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-foreground hover:text-primary transition-colors"
-                    >
-                      <FaExternalLinkAlt className="mr-2" />
-                      Live Demo
-                    </Link>
-                  )}
                 </div>
               </div>
             </motion.div>

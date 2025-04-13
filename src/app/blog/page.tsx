@@ -6,43 +6,11 @@ import Link from 'next/link';
 const blogPosts = [
   {
     id: 1,
-    title: 'Building Resilient Systems with Kubernetes',
-    excerpt: 'Exploring strategies for creating resilient, self-healing systems using Kubernetes and modern DevOps practices.',
-    date: 'May 15, 2023',
-    slug: 'building-resilient-systems-kubernetes',
-    tags: ['Kubernetes', 'DevOps', 'Platform Engineering']
-  },
-  {
-    id: 2,
     title: 'The Future of AI in Software Development',
     excerpt: 'How AI tools are changing the landscape of software development and what developers can do to stay ahead of the curve.',
     date: 'April 3, 2023',
     slug: 'future-ai-software-development',
     tags: ['AI', 'Software Development', 'Future Tech']
-  },
-  {
-    id: 3,
-    title: 'Vancouver Island: A Tech Hub in the Making',
-    excerpt: 'Exploring the growing tech scene on Vancouver Island and why more tech companies are setting up shop in this beautiful corner of Canada.',
-    date: 'March 12, 2023',
-    slug: 'vancouver-island-tech-hub',
-    tags: ['Vancouver Island', 'Tech Industry', 'Remote Work']
-  },
-  {
-    id: 4,
-    title: 'Optimizing Developer Workflows with Custom Tools',
-    excerpt: 'Creating custom developer tools to streamline your workflow and boost productivity without sacrificing quality.',
-    date: 'February 28, 2023',
-    slug: 'optimizing-developer-workflows-custom-tools',
-    tags: ['Developer Tools', 'Productivity', 'Workflow']
-  },
-  {
-    id: 5,
-    title: 'Sustainable Software: Reducing Your Carbon Footprint',
-    excerpt: 'How to write more efficient code and design systems that minimize environmental impact while maintaining performance.',
-    date: 'January 15, 2023',
-    slug: 'sustainable-software-reducing-carbon-footprint',
-    tags: ['Sustainability', 'Green Computing', 'Optimization']
   }
 ];
 
@@ -58,7 +26,7 @@ export default function BlogPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
             <div className="w-20 h-1 bg-accent mx-auto mb-6"></div>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Thoughts, stories, and insights from a Vancouver Island developer's perspective
+              My thoughts on tech, work and a some things in-between.
             </p>
           </div>
         </section>

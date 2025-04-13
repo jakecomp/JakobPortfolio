@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import RotatingTitle from './RotatingTitle';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -19,47 +20,70 @@ const Hero = () => {
         opacity: 0.2
       }}></div>
       
-      <div className="container mx-auto px-4 md:px-6 text-center z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-2">
-            Jakob Valen
-          </h1>
-          <RotatingTitle />
-        </motion.div>
-        
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8"
-        >
-          Passionate engineer currently developing platform as a service tooling at Fullscript
-        </motion.p>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-4"
-        >
-          <a 
-            href="#about" 
-            className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md transition-colors"
+      <div className="container mx-auto px-4 md:px-6 z-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-12">
+          {/* Profile Picture - Larger and on the left on desktop */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary relative flex-shrink-0"
           >
-            Learn More
-          </a>
-          <a 
-            href="#projects" 
-            className="bg-transparent border border-white text-white hover:bg-white/10 px-6 py-3 rounded-md transition-colors"
-          >
-            View Projects
-          </a>
-        </motion.div>
+            <Image 
+              src="/FullSizeRender.jpeg" 
+              alt="Jakob Valen" 
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              sizes="(max-width: 768px) 288px, 384px"
+              priority
+            />
+          </motion.div>
+          
+          {/* Name and Rotating Title - Next to profile on desktop */}
+          <div className="text-center md:text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-1">
+                Jakob Valen
+              </h1>
+              <div>
+                <RotatingTitle />
+              </div>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-lg md:text-xl text-white/80 max-w-xl mb-8"
+              >
+                Passionate engineer currently developing platform as a service tooling at Fullscript
+              </motion.p>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex flex-wrap justify-center md:justify-start gap-4"
+              >
+                <a 
+                  href="#about" 
+                  className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md transition-colors"
+                >
+                  Learn More
+                </a>
+                <a 
+                  href="#projects" 
+                  className="bg-transparent border border-white text-white hover:bg-white/10 px-6 py-3 rounded-md transition-colors"
+                >
+                  View Projects
+                </a>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
       </div>
       
       {/* Scroll indicator */}

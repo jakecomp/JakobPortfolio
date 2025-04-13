@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaBriefcase, FaGraduationCap, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const experiences = [
   {
@@ -12,6 +13,13 @@ const experiences = [
     location: 'Remote',
     period: 'November 2023 - Present',
     description: 'Working remotely as a Platform Engineer, focusing on cloud infrastructure and developer experience improvements.',
+    expandedDescription: `
+      • Designing and implementing cloud infrastructure solutions to improve scalability and reliability
+      • Creating developer tooling that enhances productivity and reduces friction
+      • Collaborating with cross-functional teams to optimize deployment pipelines
+      • Implementing observability solutions for improved system monitoring
+      • Contributing to architectural decisions for platform services
+    `,
     tags: ['Go', 'Ruby', 'TypeScript']
   },
   {
@@ -22,6 +30,13 @@ const experiences = [
     location: 'Victoria, BC',
     period: 'April 2021 - October 2023',
     description: 'Developed mission-critical software solutions and systems for defense and security applications.',
+    expandedDescription: `
+      • Built and maintained complex software systems for military applications
+      • Implemented rigorous testing procedures for mission-critical components
+      • Collaborated with hardware teams to ensure software-hardware integration
+      • Developed real-time processing systems with strict performance requirements
+      • Participated in security audits and compliance verification processes
+    `,
     tags: ['Python', 'C++', 'C']
   },
   {
@@ -32,6 +47,13 @@ const experiences = [
     location: 'Victoria, BC',
     period: 'January 2020 - March 2021',
     description: 'Built data pipelines and analytics solutions to support operational decision-making and business intelligence.',
+    expandedDescription: `
+      • Designed and implemented ETL pipelines for processing large datasets
+      • Created data visualization dashboards for operational insights
+      • Developed automated reporting systems for business stakeholders
+      • Optimized database queries and data storage solutions
+      • Collaborated with data scientists to implement machine learning models
+    `,
     tags: ['Python', 'SQL']
   },
   {
@@ -46,6 +68,12 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const toggleExpand = (id: number) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -144,6 +172,53 @@ const Experience = () => {
                 )}
                 
                 <p className="text-foreground/70">{exp.description}</p>
+                
+                {exp.expandedDescription && (
+                  <div>
+                    <button
+                      onClick={() => toggleExpand(exp.id)}
+                      className="flex items-center mt-3 text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+                      aria-expanded={expandedId === exp.id}
+                    >
+                      {expandedId === exp.id ? (
+                        <>
+                          <span>Show less</span>
+                          <FaChevronUp className="ml-1" />
+                        </>
+                      ) : (
+                        <>
+                          <span>Show more</span>
+                          <FaChevronDown className="ml-1" />
+                        </>
+                      )}
+                    </button>
+                    
+                    {expandedId === exp.id && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0, overflow: 'hidden' }}
+                        animate={{ 
+                          opacity: 1, 
+                          height: "auto",
+                          transition: {
+                            height: { duration: 0.3 },
+                            opacity: { duration: 0.2, delay: 0.1 }
+                          } 
+                        }}
+                        exit={{ 
+                          opacity: 0, 
+                          height: 0,
+                          transition: {
+                            height: { duration: 0.3 },
+                            opacity: { duration: 0.1 }
+                          }
+                        }}
+                        className="mt-3 pt-3 border-t border-foreground/10 whitespace-pre-line text-foreground/70"
+                      >
+                        {exp.expandedDescription}
+                      </motion.div>
+                    )}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
