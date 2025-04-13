@@ -8,7 +8,7 @@ const blogPosts = [
     id: 1,
     title: 'The Future of AI in Software Development',
     excerpt: 'How AI tools are changing the landscape of software development and what developers can do to stay ahead of the curve.',
-    date: 'April 3, 2023',
+    date: 'April 12, 2025',
     slug: 'future-ai-software-development',
     tags: ['AI', 'Software Development', 'Future Tech']
   }

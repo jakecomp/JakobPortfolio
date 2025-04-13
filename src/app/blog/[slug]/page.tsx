@@ -40,7 +40,7 @@ const blogPosts = [
       
       <p>The rise of AI in software development doesn't mean developers will become obsolete. Instead, the role will evolve to focus more on higher-level thinking, creativity, and guiding AI tools to produce the desired outcomes. The successful developers of tomorrow will be those who learn to work with AI as a powerful partner in the development process.</p>
     `,
-    date: 'April 3, 2023',
+    date: 'April 12, 2025',
     slug: 'future-ai-software-development',
     tags: ['AI', 'Software Development', 'Future Tech'],
     author: 'Jakob Valen'
