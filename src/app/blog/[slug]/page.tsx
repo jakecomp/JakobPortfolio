@@ -59,6 +59,13 @@ const blogPosts = [
   }
 ];
 
+// Generate static params for all blog posts
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 type Props = {
   params: { slug: string }
 }

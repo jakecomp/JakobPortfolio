@@ -7,6 +7,12 @@ const nextConfig = {
   // Disable ESLint during build
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  // Enable static exports
+  output: 'export',
+  // Enable image optimization for static export
+  images: {
+    unoptimized: true,
   }
 };
 
