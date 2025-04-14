@@ -8,12 +8,12 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Enable static exports
-  output: 'export',
-  // Enable image optimization for static export
+  // Configure images to work with static export
   images: {
-    unoptimized: true,
-  }
+    unoptimized: true
+  },
+  // Enable static exports
+  output: 'export'
 };
 
 module.exports = nextConfig; 
