@@ -19,11 +19,12 @@ const Contact = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/botanical_beach.jpeg"
+          src="/images/botanical_beach.jpeg"
           alt="Botanical Beach, Vancouver Island"
           fill
           style={{ objectFit: 'cover' }}
           quality={90}
+          unoptimized
         />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>

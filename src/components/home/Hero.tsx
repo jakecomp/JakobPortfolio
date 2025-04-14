@@ -30,12 +30,13 @@ const Hero = () => {
             className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary relative flex-shrink-0"
           >
             <Image 
-              src="/FullSizeRender.jpeg" 
+              src="/images/FullSizeRender.jpeg" 
               alt="Jakob Valen" 
               fill
               style={{ objectFit: 'cover', objectPosition: 'center' }}
               sizes="(max-width: 768px) 288px, 384px"
               priority
+              unoptimized
             />
           </motion.div>
           

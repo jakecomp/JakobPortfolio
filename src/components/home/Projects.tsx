@@ -11,7 +11,7 @@ const projects = [
     title: 'GameStonk',
     description: 'A Rails Day Trading Stock Application that allows users to track, analyze, and simulate trading of stocks in real-time.',
     tags: ['Ruby on Rails', 'PostgreSQL', 'JavaScript', 'APIs', 'Work in Progress 🚧'],
-    image: '/GameStonk.jpeg',
+    image: '/images/GameStonk.jpeg',
     githubUrl: 'https://github.com/jakecomp/GameStonk',
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     title: 'SolarSystem Mapper',
     description: 'A beautiful visualization of the solar system with live orbits and informative events about the planets and sun.',
     tags: ['JavaScript', 'Three.js', 'WebGL', 'HTML/CSS', 'Work in Progress 🚧'],
-    image: '/SolarSystems.jpeg',
+    image: '/images/SolarSystems.jpeg',
     githubUrl: 'https://github.com/',
   },
 ];
