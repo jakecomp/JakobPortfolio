@@ -31,11 +31,11 @@ const experiences = [
     period: 'April 2021 - October 2023',
     description: 'Developed mission-critical software solutions and systems for defense and security applications.',
     expandedDescription: `
-      • Built and maintained complex software systems for military applications
-      • Implemented rigorous testing procedures for mission-critical components
-      • Collaborated with hardware teams to ensure software-hardware integration
-      • Developed real-time processing systems with strict performance requirements
-      • Participated in security audits and compliance verification processes
+      • Developed a distributed data-lake application which stored and analyzed classified data for the Canadian Armed Forces using tools such as Go, Spark, S3, and Kubernetes
+
+      • Implemented a deep reinforcement learning agent using PyTorch which accurately found network vulnerabilities by analyzing attack graphs
+
+      • Continually supported linux based applications using C++ which analyzed sonar data for submarine threat detection
     `,
     tags: ['Python', 'C++', 'C']
   },
@@ -48,11 +48,11 @@ const experiences = [
     period: 'January 2020 - March 2021',
     description: 'Built data pipelines and analytics solutions to support operational decision-making and business intelligence.',
     expandedDescription: `
-      • Designed and implemented ETL pipelines for processing large datasets
-      • Created data visualization dashboards for operational insights
-      • Developed automated reporting systems for business stakeholders
-      • Optimized database queries and data storage solutions
-      • Collaborated with data scientists to implement machine learning models
+      • Developed an ML application which automated complex NLP tasks regarding the Victoria Class Submarines for mechanical engineers, reducing analysis costs by over 30%
+
+      • Deployed and supported a MySQL database which stored classified submarine data
+
+      • Implemented REST APIs for our iSupport 360 platform using Go
     `,
     tags: ['Python', 'SQL']
   },
