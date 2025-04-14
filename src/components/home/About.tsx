@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaRobot, FaDatabase, FaCircle } from 'react-icons/fa';
-import Image from 'next/image';
 
 const About = () => {
   const fadeInUp = {
@@ -47,7 +46,7 @@ const About = () => {
             variants={fadeInUp}
             className="text-lg text-foreground/80"
           >
-            I'm a passionate engineer with a love for building scalable systems and reliable solutions. I live on beautiful Vancouver Island, and I love creating tools that spark joy for developers.
+            I&apos;m a passionate engineer with a love for building scalable systems and reliable solutions. I live on beautiful Vancouver Island, and I love creating tools that spark joy for developers.
           </motion.p>
         </motion.div>
 

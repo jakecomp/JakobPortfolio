@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPaperPlane } from 'react-icons/fa';
+import { FaPaperPlane } from 'react-icons/fa';
 import Image from 'next/image';
 
 const Contact = () => {
@@ -50,7 +50,7 @@ const Contact = () => {
             variants={fadeInUp}
             className="text-lg text-white/90"
           >
-            Want to nerd out about tech, share your favourite dev tools, pair up on a new project, or just feel like saying hello? Feel free to email me, and I'll get back to you as soon as I can.
+            Want to nerd out about tech, share your favourite dev tools, pair up on a new project, or just feel like saying hello? Feel free to email me, and I&apos;ll get back to you as soon as I can.
           </motion.p>
         </motion.div>
 

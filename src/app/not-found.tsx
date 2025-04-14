@@ -14,7 +14,7 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-lg text-foreground/70 max-w-xl mx-auto mb-8">
-            Looks like you've wandered off the trail. The page you're looking for has drifted away with the tide.
+            Looks like you&apos;ve wandered off the trail. The page you&apos;re looking for has drifted away with the tide.
           </p>
           <Link 
             href="/"
