@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { FaPaperPlane } from 'react-icons/fa';
-import Image from 'next/image';
 
 const Contact = () => {
   const fadeInUp = {
@@ -18,13 +17,10 @@ const Contact = () => {
     <section id="contact" className="py-16 pb-8 relative text-white">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/botanical_beach.jpeg"
+        <img
+          src="./images/botanical_beach.jpeg"
           alt="Botanical Beach, Vancouver Island"
-          fill
-          style={{ objectFit: 'cover' }}
-          quality={90}
-          unoptimized
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>

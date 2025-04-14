@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import RotatingTitle from './RotatingTitle';
-import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -29,14 +28,10 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary relative flex-shrink-0"
           >
-            <Image 
-              src="/images/FullSizeRender.jpeg" 
+            <img 
+              src="./images/FullSizeRender.jpeg" 
               alt="Jakob Valen" 
-              fill
-              style={{ objectFit: 'cover', objectPosition: 'center' }}
-              sizes="(max-width: 768px) 288px, 384px"
-              priority
-              unoptimized
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
           </motion.div>
           

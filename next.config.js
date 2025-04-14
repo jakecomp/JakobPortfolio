@@ -9,11 +9,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   // Simple static export configuration
-  output: 'export',
-  // Configure images for static export
-  images: {
-    unoptimized: true
-  }
+  output: 'export'
 };
 
 module.exports = nextConfig; 

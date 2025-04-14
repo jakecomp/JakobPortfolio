@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
 
 const projects = [
@@ -85,12 +84,10 @@ const Projects = () => {
               className="bg-muted rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="h-48 relative overflow-hidden">
-                <Image
-                  src={project.image}
+                <img
+                  src={`./images/${project.image.split('/').pop()}`}
                   alt={project.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-dark-forest/30 hover:bg-dark-forest/10 transition-colors"></div>
               </div>
